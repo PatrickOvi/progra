@@ -11,6 +11,11 @@ const registrar = ()=>{
     //Creo un objeto con los datos recuperados
     let objeto = {nombre:vNombre}
     //Envio a una funcion que registre
-    console.log(objeto);
-    registrarPersona(objeto);
+    //console.log(objeto);
+    registrarPersona(objeto).then(()=>{
+        alert("Se registra con exito");
+        //Quitar el icono de loading
+    }).catch((error)=>{
+        console.log(error);
+    });
 }
